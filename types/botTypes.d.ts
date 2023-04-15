@@ -1,5 +1,5 @@
-import { Interaction  , Client , Collection , SlashCommandBuilder} from "discord.js";
-import {  } from "mongoose";
+import { Collection , SlashCommandBuilder} from "discord.js";
+
 
 export interface Events{
     name:string  | symbol,
@@ -9,10 +9,11 @@ export interface Events{
 
 export interface Context{
     commands: Collection<String,Command>,
-    commandArray : any[]
+    
+    commandArray: any[]
 }
 
-export interface Command{
+export interface Command {
     data: SlashCommandBuilder,
     execute : (...args: any[]) => Promise<void>
 
