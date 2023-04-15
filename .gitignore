@@ -4,3 +4,5 @@ dist
 events
 handlers
 commands
+
+.env
