@@ -20,7 +20,7 @@ const client = new Client({ intents: GatewayIntentBits.Guilds })
 handleEvents(client)
 
 handleCommands(client)
-console.log(1);
+
 
 app.listen(8001, () => console.log("ready"))
 client.login(token)
