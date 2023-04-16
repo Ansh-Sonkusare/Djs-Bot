@@ -1,4 +1,4 @@
-import { Client, Interaction, SlashCommandBuilder } from "discord.js";
+import { Client, Interaction, SlashCommandBuilder   } from "discord.js";
 import { Command } from "../types/botTypes";
 
 const command:Command = {
@@ -6,7 +6,7 @@ const command:Command = {
     execute:async (client:Client , interaction:Interaction) => {
             if(interaction.isCommand()){
                await interaction.deferReply({fetchReply:true,ephemeral:true})
-                await interaction.editReply({content:"pong"})
+                await interaction.editReply({content:`${client.ws.ping}`})
                 
                 
             }
